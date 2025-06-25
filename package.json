@@ -1,9 +1,9 @@
 {
-  "name": "ts-react-storybook-starter",
-  "description": "A Typescript React project",
+  "name": "mahjong-rules",
+  "description": "Mahjong rules JSON distribution",
   "version": "1.0.0",
-  "repository": "git@github.com:USER_NAME/ts-react-storybook-starter",
-  "author": "USER_NAME <https://github.com/USER_NAME>",
+  "repository": "git@github.com:ikcede/mahjong-rules",
+  "author": "ikcede <https://github.com/ikcede>",
   "license": "MIT",
   "private": false,
   "main": "dist/main.js",
@@ -16,9 +16,7 @@
     "start": "vite",
     "build": "tsc && vite build --config vite-build.config.mts",
     "test": "jest --watch",
-    "format": "prettier --write .",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -33,20 +31,12 @@
     "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.2.9",
-    "@storybook/addon-interactions": "^8.2.9",
-    "@storybook/blocks": "^8.2.9",
-    "@storybook/react": "^8.2.9",
-    "@storybook/react-vite": "^8.2.9",
-    "@storybook/test": "^8.2.9",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.5.3",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "ts-jest": "^29.2.5",
-    "eslint-plugin-storybook": "^0.8.0",
     "prettier": "3.3.3",
-    "storybook": "^8.2.9",
     "vite-plugin-dts": "^4.1.0",
     "typescript": "^5.5.4"
   },
