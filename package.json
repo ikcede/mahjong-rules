@@ -1,0 +1,69 @@
+{
+  "name": "ts-react-storybook-starter",
+  "description": "A Typescript React project",
+  "version": "1.0.0",
+  "repository": "git@github.com:USER_NAME/ts-react-storybook-starter",
+  "author": "USER_NAME <https://github.com/USER_NAME>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build --config vite-build.config.mts",
+    "test": "jest --watch",
+    "format": "prettier --write .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.3",
+    "vite-tsconfig-paths": "^5.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.3",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "ts-jest": "^29.2.5",
+    "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "3.3.3",
+    "storybook": "^8.2.9",
+    "vite-plugin-dts": "^4.1.0",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
