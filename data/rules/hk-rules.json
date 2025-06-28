@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Self Flower",
+    "description": "Either flower of your seat",
+    "notes": "If you are the first to play, your flower number is 1. Each subsequent player's flower number is 1 higher than the previous player.",
+    "tiles": ["flower11", "flower21"]
+  },
+  {
+    "name": "No Flowers",
+    "description": "Having no flowers",
+    "notes": "",
+    "tiles": []
+  },
+  {
+    "name": "Flower Set",
+    "description": "A full set of flowers of the same color",
+    "notes": "",
+    "tiles": ["flower11", "flower12", "flower13", "flower14"]
+  },
+  {
+    "name": "Seven Flowers",
+    "description": "Drawing 7 flower tiles.",
+    "notes": "In some variations, this counts as an automatic win.",
+    "tiles": [
+      "flower11",
+      "flower12",
+      "flower13",
+      "flower14",
+      "flower21",
+      "flower22",
+      "flower23"
+    ]
+  },
+  {
+    "name": "All Flowers",
+    "description": "Drawing all 8 of the flowers.",
+    "notes": "In some variations, this counts as an automatic win.",
+    "tiles": [
+      "flower11",
+      "flower12",
+      "flower13",
+      "flower14",
+      "flower21",
+      "flower22",
+      "flower23",
+      "flower24"
+    ]
+  }
+]

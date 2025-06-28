@@ -1,0 +1,65 @@
+{
+  "name": "Hong Kong Traditional",
+  "description": "The traditional scoring system for Hong Kong Mahjong, based on information from wikipedia.",
+  "link": "https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules",
+  "score_type": "Fan",
+  "rules": [
+    {
+      "name": "Self Flower",
+      "description": "Either flower of your seat",
+      "notes": "If you are the first to play, your flower number is 1. Each subsequent player's flower number is 1 higher than the previous player.",
+      "value": 1,
+      "tags": ["standard", "bonus"],
+      "tiles": ["flower11", "flower21"]
+    },
+    {
+      "name": "No Flowers",
+      "description": "Having no flowers",
+      "notes": "",
+      "value": 1,
+      "tags": ["standard", "bonus"],
+      "tiles": []
+    },
+    {
+      "name": "Flower Set",
+      "description": "A full set of flowers of the same color",
+      "notes": "",
+      "value": 2,
+      "tags": ["standard", "bonus"],
+      "tiles": ["flower11", "flower12", "flower13", "flower14"]
+    },
+    {
+      "name": "Seven Flowers",
+      "description": "Drawing 7 flower tiles.",
+      "notes": "In some variations, this counts as an automatic win.",
+      "value": 3,
+      "tags": ["extra", "bonus", "autowin"],
+      "tiles": [
+        "flower11",
+        "flower12",
+        "flower13",
+        "flower14",
+        "flower21",
+        "flower22",
+        "flower23"
+      ]
+    },
+    {
+      "name": "All Flowers",
+      "description": "Drawing all 8 of the flowers.",
+      "notes": "In some variations, this counts as an automatic win.",
+      "value": 8,
+      "tags": ["extra", "bonus", "autowin"],
+      "tiles": [
+        "flower11",
+        "flower12",
+        "flower13",
+        "flower14",
+        "flower21",
+        "flower22",
+        "flower23",
+        "flower24"
+      ]
+    }
+  ]
+}

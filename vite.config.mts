@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 
 /**
- * Default config file for running vite dev server on /example
+ * Default config file for running vite dev server on /app
  */
 export default defineConfig({
   base: '',
@@ -12,6 +12,6 @@ export default defineConfig({
     open: true,
     port: 3000,
   },
-  root: './example',
+  root: './app',
   publicDir: './public',
 });

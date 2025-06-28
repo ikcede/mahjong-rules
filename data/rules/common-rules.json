@@ -1,0 +1,482 @@
+[
+  {
+    "name": "All Sequences",
+    "description": "Every set is a sequence",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "2wan",
+      "3wan",
+      "1dot",
+      "2dot",
+      "3dot",
+      "7stick",
+      "8stick",
+      "9stick",
+      "1stick",
+      "2stick",
+      "3stick",
+      "north",
+      "north"
+    ]
+  },
+  {
+    "name": "Dragon Pong",
+    "description": "Pong/Kong of any dragon",
+    "notes": "",
+    "tiles": ["reddrag", "reddrag", "reddrag"]
+  },
+  {
+    "name": "Round Wind",
+    "description": "Pong/Kong of the current wind",
+    "notes": "",
+    "tiles": ["east", "east", "east"]
+  },
+  {
+    "name": "Seat Wind",
+    "description": "Pong/Kong of the player's wind.",
+    "notes": "The dealer's seat is East, second player is South, third is West, and fourth is North.",
+    "tiles": ["east", "east", "east"]
+  },
+  {
+    "name": "Self Draw",
+    "description": "Winning by drawing a tile from the wall",
+    "notes": "This can be from the front or back of the wall.",
+    "tiles": []
+  },
+  {
+    "name": "Concealed Hand",
+    "description": "Winning without showing any melds from the hand",
+    "notes": "",
+    "tiles": []
+  },
+  {
+    "name": "Robbing the Kong",
+    "description": "Winning off of another player's kong",
+    "notes": "",
+    "tiles": []
+  },
+  {
+    "name": "Last Tile",
+    "description": "Winning off the last tile in the game, drawn or discarded",
+    "notes": "",
+    "tiles": []
+  },
+  {
+    "name": "Kong Replacement",
+    "description": "Drawing the winning tile from a kong (does not stack with self-draw)",
+    "notes": "",
+    "tiles": []
+  },
+  {
+    "name": "Replacement Self Draw",
+    "description": "Drawing the winning tile from a kong or flower (does not stack with self-draw)",
+    "notes": "",
+    "tiles": []
+  },
+  {
+    "name": "Double Kong Replacement",
+    "description": "Drawing the winning tile from a kong immediately after a kong (does not stack with self-draw)",
+    "notes": "In some rulesets, replacing with a flower does not count.",
+    "tiles": []
+  },
+  {
+    "name": "All Triplets",
+    "description": "Hand is composed of all pongs or kongs",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1wan",
+      "3dot",
+      "3dot",
+      "3dot",
+      "8stick",
+      "8stick",
+      "8stick",
+      "greendrag",
+      "greendrag",
+      "greendrag",
+      "greendrag",
+      "south",
+      "south"
+    ]
+  },
+  {
+    "name": "Mixed One Suit",
+    "description": "A Hand composed of only honor tiles and tiles from one suit.",
+    "notes": "This can be a mix of pongs, kongs, and chows.",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1wan",
+      "3wan",
+      "4wan",
+      "5wan",
+      "7wan",
+      "8wan",
+      "9wan",
+      "whitedrag",
+      "whitedrag",
+      "whitedrag",
+      "south",
+      "south"
+    ]
+  },
+  {
+    "name": "All Pairs",
+    "description": "Hand of 7 unique pairs, does not stack with concealed hand.",
+    "notes": "Having four of the same tile is not a unique pair.",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1stick",
+      "1stick",
+      "4dot",
+      "4dot",
+      "8stick",
+      "8stick",
+      "north",
+      "north",
+      "east",
+      "east",
+      "south",
+      "south"
+    ]
+  },
+  {
+    "name": "Pure One Suit",
+    "description": "All tiles from a single suit.",
+    "notes": "This can be a mix of pongs, kongs, and chows but cannot include honor tiles.",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1wan",
+      "1wan",
+      "2wan",
+      "3wan",
+      "4wan",
+      "4wan",
+      "4wan",
+      "5wan",
+      "6wan",
+      "7wan",
+      "9wan",
+      "9wan"
+    ]
+  },
+  {
+    "name": "Lesser Dragons",
+    "description": "Melds of 2 dragons and a pair of the 3rd dragon",
+    "notes": "",
+    "tiles": [
+      "reddrag",
+      "reddrag",
+      "reddrag",
+      "greendrag",
+      "greendrag",
+      "greendrag",
+      "whitedrag",
+      "whitedrag"
+    ]
+  },
+  {
+    "name": "Small Winds",
+    "description": "Melds of 3 winds and a pair of the 4th wind",
+    "notes": "",
+    "tiles": [
+      "east",
+      "east",
+      "east",
+      "south",
+      "south",
+      "south",
+      "west",
+      "west",
+      "west",
+      "north",
+      "north"
+    ]
+  },
+  {
+    "name": "Greater Dragons",
+    "description": "Melds of all 3 dragon tiles.",
+    "notes": "",
+    "tiles": [
+      "reddrag",
+      "reddrag",
+      "reddrag",
+      "greendrag",
+      "greendrag",
+      "greendrag",
+      "whitedrag",
+      "whitedrag",
+      "whitedrag"
+    ]
+  },
+  {
+    "name": "All Honors",
+    "description": "A hand with only honor tiles.",
+    "notes": "This does not stack with All Triplets because it is implied.",
+    "tiles": [
+      "reddrag",
+      "reddrag",
+      "reddrag",
+      "greendrag",
+      "greendrag",
+      "greendrag",
+      "whitedrag",
+      "whitedrag",
+      "whitedrag",
+      "east",
+      "east",
+      "east",
+      "north",
+      "north"
+    ]
+  },
+  {
+    "name": "Four Great Winds",
+    "description": "A hand with melds of all 4 winds.",
+    "notes": "",
+    "tiles": [
+      "east",
+      "east",
+      "east",
+      "south",
+      "south",
+      "south",
+      "west",
+      "west",
+      "west",
+      "north",
+      "north",
+      "north",
+      "4dot",
+      "4dot"
+    ]
+  },
+  {
+    "name": "Thirteen Orphans",
+    "description": "One of each one, nine, wind, and dragon, and a 14th tile (any other terminal or honor tile)",
+    "notes": "",
+    "tiles": [
+      "east",
+      "south",
+      "west",
+      "north",
+      "reddrag",
+      "greendrag",
+      "whitedrag",
+      "1wan",
+      "9wan",
+      "1dot",
+      "9dot",
+      "1stick",
+      "9stick",
+      "9stick"
+    ]
+  },
+  {
+    "name": "All Kongs",
+    "description": "Hand containing four Kongs and a pair.",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1wan",
+      "1wan",
+      "2dot",
+      "2dot",
+      "2dot",
+      "2dot",
+      "5stick",
+      "5stick",
+      "5stick",
+      "5stick",
+      "north",
+      "north",
+      "north",
+      "north",
+      "greendrag",
+      "greendrag"
+    ]
+  },
+  {
+    "name": "Concealed Triplets",
+    "description": "Hand containing four concealed (unmelded) triplets.",
+    "notes": "The bonus can only be won by concealed self draw unless the discarded winning tile forms the pair, not any of the four melds.",
+    "tiles": []
+  },
+  {
+    "name": "All Terminals",
+    "description": "Hand containing pongs or kongs of only one and nine tiles.",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1wan",
+      "9wan",
+      "9wan",
+      "9wan",
+      "1dot",
+      "1dot",
+      "1dot",
+      "1stick",
+      "1stick",
+      "1stick",
+      "9stick",
+      "9stick"
+    ]
+  },
+  {
+    "name": "Nine Gates",
+    "description": "Hand in any one suit consisting of exactly 1112345678999 and an extra tile of that suit.",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "1wan",
+      "1wan",
+      "2wan",
+      "3wan",
+      "4wan",
+      "5wan",
+      "6wan",
+      "7wan",
+      "8wan",
+      "9wan",
+      "9wan",
+      "9wan",
+      "5wan"
+    ]
+  },
+  {
+    "name": "Blessing of Heaven",
+    "description": "Dealer wins with their starting hand.",
+    "notes": "Does not stack with concealed hand.",
+    "tiles": []
+  },
+  {
+    "name": "Blessing of Earth",
+    "description": "Player wins on the first discard.",
+    "notes": "Does not stack with concealed hand.",
+    "tiles": []
+  },
+  {
+    "name": "Pure Straight",
+    "description": "A hand using tiles 1-9 from any one suit, forming three consecutive sequences.",
+    "notes": "These must be exactly [1, 2, 3], [4, 5, 6], and [7, 8, 9].",
+    "tiles": [
+      "1dot",
+      "2dot",
+      "3dot",
+      "4dot",
+      "5dot",
+      "6dot",
+      "7dot",
+      "8dot",
+      "9dot"
+    ]
+  },
+  {
+    "name": "Pure Double",
+    "description": "Two runs of the same suit and same numerical sequence.",
+    "notes": "In some variations, this only scores if the hand is also concealed.",
+    "tiles": ["1wan", "2wan", "3wan", "1wan", "2wan", "3wan"]
+  },
+  {
+    "name": "Mixed Triple Sequence",
+    "description": "Three runs of the same numerical sequence, one in each suit.",
+    "notes": "",
+    "tiles": [
+      "1dot",
+      "2dot",
+      "3dot",
+      "1wan",
+      "2wan",
+      "3wan",
+      "1stick",
+      "2stick",
+      "3stick"
+    ]
+  },
+  {
+    "name": "Mixed Straight",
+    "description": "A straight (tiles 1-9) formed by sequences from all three suits.",
+    "notes": "The sequences must be exactly [1, 2, 3], [4, 5, 6], and [7, 8, 9].",
+    "tiles": [
+      "1dot",
+      "2dot",
+      "3dot",
+      "4wan",
+      "5wan",
+      "6wan",
+      "7stick",
+      "8stick",
+      "9stick"
+    ]
+  },
+  {
+    "name": "Outside Hand",
+    "description": "A hand that includes Terminals and Honors in each set, including the pair.",
+    "notes": "",
+    "tiles": [
+      "1dot",
+      "2dot",
+      "3dot",
+      "1wan",
+      "1wan",
+      "1wan",
+      "7stick",
+      "8stick",
+      "9stick",
+      "east",
+      "east",
+      "east",
+      "whitedrag",
+      "whitedrag"
+    ]
+  },
+  {
+    "name": "Simple Hand",
+    "description": "A hand formed without Terminal or Honor tiles.",
+    "notes": "",
+    "tiles": [
+      "2dot",
+      "3dot",
+      "4dot",
+      "5dot",
+      "5dot",
+      "5dot",
+      "6stick",
+      "7stick",
+      "8stick",
+      "4wan",
+      "5wan",
+      "6wan",
+      "3stick",
+      "3stick"
+    ]
+  },
+  {
+    "name": "Terminals and Honors",
+    "description": "A hand entirely composed of Terminal and Honor tiles.",
+    "notes": "",
+    "tiles": [
+      "1dot",
+      "1dot",
+      "1dot",
+      "1wan",
+      "1wan",
+      "1wan",
+      "9stick",
+      "9stick",
+      "9stick",
+      "east",
+      "east",
+      "east",
+      "whitedrag",
+      "whitedrag"
+    ]
+  }
+]

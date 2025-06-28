@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     viteTsconfigPaths(),
     dts({
-      exclude: ['**/stories', '**/test'],
+      exclude: ['**/test'],
       insertTypesEntry: true,
       rollupTypes: true,
     }),
@@ -21,7 +21,7 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     lib: {
-      entry: 'src/components/index.ts',
+      entry: 'src/index.ts',
       formats: ['es'],
     },
     outDir: 'dist',
