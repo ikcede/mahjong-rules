@@ -7,6 +7,7 @@ export type Rule = CommonRule & {
 
 export type Variant = {
   name: string;
+  style: string;
   description?: string;
   link?: string;
   score_type: string;

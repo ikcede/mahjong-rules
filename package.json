@@ -17,7 +17,8 @@
     "start": "vite",
     "build": "tsc && vite build --config vite-build.config.mts",
     "test": "jest --watch",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "generate-data": "tsx scripts/generate-data.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -39,7 +40,8 @@
     "prettier": "3.3.3",
     "ts-jest": "^29.2.5",
     "typescript": "^5.5.4",
-    "vite-plugin-dts": "^4.1.0"
+    "vite-plugin-dts": "^4.1.0",
+    "tsx": "^4.19.2"
   },
   "peerDependencies": {
     "react": "^18.3.1",

@@ -42,6 +42,7 @@ export function generateRulesFromTemplate(
   return {
     name: template.name,
     description: template.description,
+    style: template.style,
     link: template.link,
     score_type: template.score_type,
     rules: generatedRules,

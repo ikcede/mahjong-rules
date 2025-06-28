@@ -1,6 +1,7 @@
 {
   "name": "Hong Kong Traditional",
   "description": "The traditional scoring system for Hong Kong Mahjong, based on information from wikipedia.",
+  "style": "hk",
   "link": "https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules",
   "score_type": "Fan",
   "rules": [
@@ -8,32 +9,30 @@
       "name": "Self Flower",
       "description": "Either flower of your seat",
       "notes": "If you are the first to play, your flower number is 1. Each subsequent player's flower number is 1 higher than the previous player.",
+      "tiles": ["flower11", "flower21"],
       "value": 1,
-      "tags": ["standard", "bonus"],
-      "tiles": ["flower11", "flower21"]
+      "tags": ["standard", "bonus"]
     },
     {
       "name": "No Flowers",
       "description": "Having no flowers",
       "notes": "",
+      "tiles": [],
       "value": 1,
-      "tags": ["standard", "bonus"],
-      "tiles": []
+      "tags": ["standard", "bonus"]
     },
     {
       "name": "Flower Set",
       "description": "A full set of flowers of the same color",
       "notes": "",
+      "tiles": ["flower11", "flower12", "flower13", "flower14"],
       "value": 2,
-      "tags": ["standard", "bonus"],
-      "tiles": ["flower11", "flower12", "flower13", "flower14"]
+      "tags": ["standard", "bonus"]
     },
     {
       "name": "Seven Flowers",
       "description": "Drawing 7 flower tiles.",
       "notes": "In some variations, this counts as an automatic win.",
-      "value": 3,
-      "tags": ["extra", "bonus", "autowin"],
       "tiles": [
         "flower11",
         "flower12",
@@ -42,14 +41,14 @@
         "flower21",
         "flower22",
         "flower23"
-      ]
+      ],
+      "value": 3,
+      "tags": ["extra", "bonus", "autowin"]
     },
     {
       "name": "All Flowers",
       "description": "Drawing all 8 of the flowers.",
       "notes": "In some variations, this counts as an automatic win.",
-      "value": 8,
-      "tags": ["extra", "bonus", "autowin"],
       "tiles": [
         "flower11",
         "flower12",
@@ -59,7 +58,431 @@
         "flower22",
         "flower23",
         "flower24"
-      ]
+      ],
+      "value": 8,
+      "tags": ["extra", "bonus", "autowin"]
+    },
+    {
+      "name": "All Sequences",
+      "description": "Every set is a sequence",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "2wan",
+        "3wan",
+        "1dot",
+        "2dot",
+        "3dot",
+        "7stick",
+        "8stick",
+        "9stick",
+        "1stick",
+        "2stick",
+        "3stick",
+        "north",
+        "north"
+      ],
+      "variant_name": "All Chows",
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Dragon Pong",
+      "description": "Pong/Kong of any dragon",
+      "notes": "",
+      "tiles": ["reddrag", "reddrag", "reddrag"],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Round Wind",
+      "description": "Pong/Kong of the current wind",
+      "notes": "",
+      "tiles": ["east", "east", "east"],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Seat Wind",
+      "description": "Pong/Kong of the player's wind.",
+      "notes": "The dealer's seat is East, second player is South, third is West, and fourth is North.",
+      "tiles": ["east", "east", "east"],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Self Draw",
+      "description": "Winning by drawing a tile from the wall",
+      "notes": "This can be from the front or back of the wall.",
+      "tiles": [],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Concealed Hand",
+      "description": "Winning without showing any melds from the hand",
+      "notes": "",
+      "tiles": [],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Robbing the Kong",
+      "description": "Winning off of another player's kong",
+      "notes": "",
+      "tiles": [],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Last Tile",
+      "description": "Winning off the last tile in the game, drawn or discarded",
+      "notes": "",
+      "tiles": [],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Kong Replacement",
+      "description": "Drawing the winning tile from a kong (does not stack with self-draw)",
+      "notes": "",
+      "tiles": [],
+      "value": 1,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Replacement Self Draw",
+      "description": "Winning by drawing a tile from the wall",
+      "notes": "This can be from the front or back of the wall.",
+      "tiles": [],
+      "value": 1,
+      "tags": ["extra"]
+    },
+    {
+      "name": "All Triplets",
+      "description": "Hand is composed of all pongs or kongs",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1wan",
+        "3dot",
+        "3dot",
+        "3dot",
+        "8stick",
+        "8stick",
+        "8stick",
+        "greendrag",
+        "greendrag",
+        "greendrag",
+        "greendrag",
+        "south",
+        "south"
+      ],
+      "variant_name": "All Pongs",
+      "value": 3,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Mixed One Suit",
+      "description": "A Hand composed of only honor tiles and tiles from one suit.",
+      "notes": "This can be a mix of pongs, kongs, and chows.",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1wan",
+        "3wan",
+        "4wan",
+        "5wan",
+        "7wan",
+        "8wan",
+        "9wan",
+        "whitedrag",
+        "whitedrag",
+        "whitedrag",
+        "south",
+        "south"
+      ],
+      "alt_names": ["Clean Hand", "Half Flush"],
+      "value": 3,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Double Kong Replacement",
+      "description": "Drawing the winning tile from a kong (does not stack with self-draw)",
+      "notes": "",
+      "tiles": [],
+      "value": 8,
+      "tags": ["standard"]
+    },
+    {
+      "name": "All Pairs",
+      "description": "Hand of 7 unique pairs, does not stack with concealed hand.",
+      "notes": "Having four of the same tile is not a unique pair.",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1stick",
+        "1stick",
+        "4dot",
+        "4dot",
+        "8stick",
+        "8stick",
+        "north",
+        "north",
+        "east",
+        "east",
+        "south",
+        "south"
+      ],
+      "variant_name": "Seven Pairs",
+      "value": 4,
+      "tags": ["extra"]
+    },
+    {
+      "name": "Pure One Suit",
+      "description": "All tiles from a single suit.",
+      "notes": "This can be a mix of pongs, kongs, and chows but cannot include honor tiles.",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1wan",
+        "1wan",
+        "2wan",
+        "3wan",
+        "4wan",
+        "4wan",
+        "4wan",
+        "5wan",
+        "6wan",
+        "7wan",
+        "9wan",
+        "9wan"
+      ],
+      "alt_names": ["Pure Hand", "Full Flush"],
+      "value": 7,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Lesser Dragons",
+      "description": "Melds of 2 dragons and a pair of the 3rd dragon",
+      "notes": "",
+      "tiles": [
+        "reddrag",
+        "reddrag",
+        "reddrag",
+        "greendrag",
+        "greendrag",
+        "greendrag",
+        "whitedrag",
+        "whitedrag"
+      ],
+      "value": 5,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Greater Dragons",
+      "description": "Melds of all 3 dragon tiles.",
+      "notes": "",
+      "tiles": [
+        "reddrag",
+        "reddrag",
+        "reddrag",
+        "greendrag",
+        "greendrag",
+        "greendrag",
+        "whitedrag",
+        "whitedrag",
+        "whitedrag"
+      ],
+      "value": 8,
+      "tags": ["standard"]
+    },
+    {
+      "name": "All Honors",
+      "description": "A hand with only honor tiles.",
+      "notes": "This does not stack with All Triplets because it is implied.",
+      "tiles": [
+        "reddrag",
+        "reddrag",
+        "reddrag",
+        "greendrag",
+        "greendrag",
+        "greendrag",
+        "whitedrag",
+        "whitedrag",
+        "whitedrag",
+        "east",
+        "east",
+        "east",
+        "north",
+        "north"
+      ],
+      "value": 10,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Small Winds",
+      "description": "Melds of 3 winds and a pair of the 4th wind",
+      "notes": "",
+      "tiles": [
+        "east",
+        "east",
+        "east",
+        "south",
+        "south",
+        "south",
+        "west",
+        "west",
+        "west",
+        "north",
+        "north"
+      ],
+      "value": 6,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Four Great Winds",
+      "description": "A hand with melds of all 4 winds.",
+      "notes": "",
+      "tiles": [
+        "east",
+        "east",
+        "east",
+        "south",
+        "south",
+        "south",
+        "west",
+        "west",
+        "west",
+        "north",
+        "north",
+        "north",
+        "4dot",
+        "4dot"
+      ],
+      "value": 13,
+      "tags": ["standard", "limit"]
+    },
+    {
+      "name": "Thirteen Orphans",
+      "description": "One of each one, nine, wind, and dragon, and a 14th tile (any other terminal or honor tile)",
+      "notes": "",
+      "tiles": [
+        "east",
+        "south",
+        "west",
+        "north",
+        "reddrag",
+        "greendrag",
+        "whitedrag",
+        "1wan",
+        "9wan",
+        "1dot",
+        "9dot",
+        "1stick",
+        "9stick",
+        "9stick"
+      ],
+      "value": 13,
+      "tags": ["standard", "limit"]
+    },
+    {
+      "name": "Nine Gates",
+      "description": "Hand in any one suit consisting of exactly 1112345678999 and an extra tile of that suit.",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1wan",
+        "2wan",
+        "3wan",
+        "4wan",
+        "5wan",
+        "6wan",
+        "7wan",
+        "8wan",
+        "9wan",
+        "9wan",
+        "9wan",
+        "5wan"
+      ],
+      "value": 10,
+      "tags": ["standard", "limit"]
+    },
+    {
+      "name": "All Kongs",
+      "description": "Hand containing four Kongs and a pair.",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1wan",
+        "1wan",
+        "2dot",
+        "2dot",
+        "2dot",
+        "2dot",
+        "5stick",
+        "5stick",
+        "5stick",
+        "5stick",
+        "north",
+        "north",
+        "north",
+        "north",
+        "greendrag",
+        "greendrag"
+      ],
+      "value": 13,
+      "tags": ["standard", "limit"]
+    },
+    {
+      "name": "All Terminals",
+      "description": "Hand containing pongs or kongs of only one and nine tiles.",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "1wan",
+        "1wan",
+        "9wan",
+        "9wan",
+        "9wan",
+        "1dot",
+        "1dot",
+        "1dot",
+        "1stick",
+        "1stick",
+        "1stick",
+        "9stick",
+        "9stick"
+      ],
+      "value": 10,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Concealed Triplets",
+      "description": "Hand containing four concealed (unmelded) triplets.",
+      "notes": "The bonus can only be won by concealed self draw unless the discarded winning tile forms the pair, not any of the four melds.",
+      "tiles": [],
+      "value": 10,
+      "tags": ["standard"]
+    },
+    {
+      "name": "Blessing Of Heaven",
+      "description": "Dealer wins with their starting hand.",
+      "notes": "Does not stack with concealed hand.",
+      "tiles": [],
+      "value": 13,
+      "tags": ["standard", "limit"]
+    },
+    {
+      "name": "Blessing Of Earth",
+      "description": "Player wins on the first discard.",
+      "notes": "Does not stack with concealed hand.",
+      "tiles": [],
+      "value": 13,
+      "tags": ["standard", "limit"]
     }
   ]
 }
