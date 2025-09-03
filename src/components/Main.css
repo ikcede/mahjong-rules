@@ -1,0 +1,38 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 600px;
+}
+
+@media (max-width: 600px) {
+  main {
+    min-width: 95vw;
+  }
+}
+
+input {
+  padding: 8px;
+  border: 2px solid #00681f;
+  border-radius: 8px;
+  color: #00681f;
+  background-color: #e0dac6;
+}
+
+input:focus {
+  outline: 2px solid #00681f;
+}
+
+input::placeholder {
+  color: #00681f;
+}
+
+.rules-search {
+  margin-bottom: 8px;
+}
+
+.rule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
