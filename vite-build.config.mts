@@ -8,6 +8,9 @@ import viteTsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   base: '/mahjong-rules/',
   plugins: [react(), viteTsconfigPaths()],
-  root: '.',
+  root: './app',
+  build: {
+    outDir: '../dist',
+  },
   publicDir: './public',
 });
