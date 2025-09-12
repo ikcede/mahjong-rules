@@ -16,6 +16,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build --config vite-build.config.mts",
+    "preview": "vite preview",
     "test": "jest --watch",
     "format": "prettier --write .",
     "generate-data": "tsx scripts/generate-data.ts",
