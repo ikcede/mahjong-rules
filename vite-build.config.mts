@@ -7,7 +7,7 @@ import dts from 'vite-plugin-dts';
  * Config file for building main.js and main.d.ts
  */
 export default defineConfig({
-  base: '',
+  base: '/mahjong-rules/',
   root: '.',
   plugins: [
     react(),
