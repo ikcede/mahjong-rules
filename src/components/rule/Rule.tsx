@@ -19,7 +19,13 @@ export const Rule: FC<RuleProps> = ({ rule, showDescription = false }) => {
         onClick={() => setExpanded(!expanded)}
       >
         <div className="rule-name">{rule.name}</div>
-        <div className="rule-arrow">{expanded ? '▼' : '▶'}</div>
+        <div
+          className={
+            expanded ? 'rule-arrow expanded' : 'rule-arrow collapsed'
+          }
+        >
+          ▼
+        </div>
       </button>
       {expanded && (
         <div className="rule-description">{rule.description}</div>

@@ -18,7 +18,8 @@
     "build": "tsc && vite build --config vite-build.config.mts",
     "test": "jest --watch",
     "format": "prettier --write .",
-    "generate-data": "tsx scripts/generate-data.ts"
+    "generate-data": "tsx scripts/generate-data.ts",
+    "publish": "npm run generate-data && npm publish"
   },
   "eslintConfig": {
     "extends": [

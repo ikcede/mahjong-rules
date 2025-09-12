@@ -1,5 +1,23 @@
 body {
+  font-family: 'Reddit Sans', sans-serif;
   margin: 0;
   background: #e0dac6;
   color: #00681f;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2%;
+}
+
+button {
+  font-family: 'Reddit Sans', sans-serif;
+  font-size: 1em;
+}
+
+input::placeholder {
+  font-family: 'Reddit Sans', sans-serif;
+  font-size: 1em;
 }

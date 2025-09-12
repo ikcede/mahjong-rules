@@ -5,6 +5,7 @@
 
   border: 2px solid #00681f;
   border-radius: 0px;
+  overflow: hidden;
 }
 
 .rule-header {
@@ -20,12 +21,41 @@
   color: #00681f;
 }
 
+.rule-header:hover,
+.rule-header:focus {
+  background-color: #e0d7bb;
+}
+
 .rule-name {
   display: flex;
   font-weight: bold;
 }
 
+.rule-arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rule-arrow.expanded {
+  transform: rotate(0deg);
+}
+
+.rule-arrow.collapsed {
+  transform: rotate(-90deg);
+}
+
 .rule-description {
   padding: 8px;
   padding-top: 0px;
+  box-sizing: border-box;
+
+  animation: expand 0.3s;
+}
+
+@keyframes expand {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 25px;
+  }
 }
