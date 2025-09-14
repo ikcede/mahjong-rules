@@ -1,73 +1,87 @@
-# Typescript React Storybook Starter
+# Mahjong Rules
 
-A template repository for quickly getting started with creating React component libraries.
+This repository maintains a list of common rules and their scores for different Mahjong variants.
 
-- Uses Vite for example builds + Storybook
-- Uses Jest for tests
-- Includes sample Storybook setup
-- Includes deployment workflows for either Github Packages or NPM
-- Uses prettier for formatting
+## Rules
 
-## Getting Started
+The rules are broken into two categories:
 
-Once you've cloned the repo, run the following commands to force all packages to the latest versions before installing:
+1. Base rules without points
+2. Styles like Hong Kong Traditional which add include point values for each rule used in the style.
 
-```sh
-npx npm-check-updates -u
+## JSON Formats
+
+### Common Rules JSON
+
+Linked from [src/types/common.d.ts](src/types/common.d.ts).
+
+```typescript
+export type CommonRule = {
+  /** The name of the rule. */
+  name: string;
+
+  /** A short description of the rule. */
+  description: string;
+
+  /** Additional notes or explanations about the rule. */
+  notes: string;
+
+  /** An example set of tiles that satisfies the rule. */
+  tiles: string[];
+};
+```
+
+### Style JSONs
+
+Linked from [src/types/variant.d.ts](src/types/variant.d.ts).
+
+```typescript
+/** A variant is a specific Mahjong style with a unique set of rules. */
+export type Variant = {
+  /** The name of the variant. */
+  name: string;
+
+  /** The shorthand style of the variant (e.g. "hk", "jp"). */
+  style: string;
+
+  /** A short description of the variant. */
+  description?: string;
+
+  /** A link to the reference page for the variant. */
+  link?: string;
+
+  /** The type of score used in the variant (e.g. "Fan", "Yaku"). */
+  score_type: string;
+
+  /** The rules of the variant. */
+  rules: Rule[];
+};
+
+/** A rule is a combination of a common rule and a variant-specific properties. */
+export type Rule = CommonRule & {
+  /** The value of the rule in the variant's score type. */
+  value: number;
+
+  /** Tags for the rule. */
+  tags?: string[];
+
+  /** Overrides the name of the rule for the variant. */
+  variant_name?: string;
+
+  /** Alternative names for the rule. */
+  alt_names?: string[];
+};
+```
+
+## Demo
+
+You can browse the common rules at [https://ikcede.github.io/mahjong-rules/](https://ikcede.github.io/mahjong-rules/).
+
+## Development
+
+After cloning the repository, you can run the following commands to start the development server:
+
+```bash
 npm install
+npm run start
 ```
-
-Now you can open up a dev server with:
-
-```sh
-npm start
-```
-
-Have fun coding!
-
-## Deploying Storybook to Github Pages
-
-Uncomment the lines in `.github/workflows/deploy.yaml` to deploy a Storybook instance to Github Pages. You will also need to enable Github Pages for your repository in the Settings tab.
-
-## Publishing Packages
-
-You can choose to publish your package to either [Github's Package Repository](https://github.com/features/packages) or [NPM](https://www.npmjs.com/).
-
-### Publishing to NPM
-
-To publish to NPM, you can use the `.github/workflows/publish-npm.yaml` workflow, which will automatically publish a package on a new release.
-
-Additionally, you'll need to create an automation token on your NPM account and set it on the repository:
-
-1. Navigate to the Access Tokens page of your NPM account and generate a new classic token
-2. Make sure the token is set to Automation
-3. Go to your repository's Settings > Secrets and variables > Actions page and add a new Repository Secret
-4. Make sure the name of the secret in the workflow matches
-
-## Local Development
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-**Note**: This runs the App files in example/ as the dev environment.
-
-The page will reload if you make edits. You will also see any lint errors in the console.
-
-### `npm test`
-
-Runs tests in Jest
-
-### `npm run build`
-
-Using `vite-build.config.ts`, compiles and exports the TS library into `dist/main.js` and `dist/main.d.ts`.
-
-### `npm run storybook`
-
-Starts up a Storybook server on [http://localhost:6006](http://localhost:6006)
-
-### `npm run build-storybook`
-
-Builds a static web app version of Storybook to `/storybook-static`
