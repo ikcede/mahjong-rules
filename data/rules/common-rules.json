@@ -478,5 +478,68 @@
       "whitedrag",
       "whitedrag"
     ]
+  },
+  {
+    "name": "Knitted Straight",
+    "description": "Hand with 147 258 369 of different suits, an additional meld, and a pair. 147, 258, and 369 count as chows for scoring.",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "4wan",
+      "7wan",
+      "2stick",
+      "5stick",
+      "8stick",
+      "3dot",
+      "6dot",
+      "9dot",
+      "3wan",
+      "3wan",
+      "3wan",
+      "east",
+      "east"
+    ]
+  },
+  {
+    "name": "Knitted Lesser Honors",
+    "description": "147 258 369 of different suits with honor tiles instead of melds and an eye. Honor tiles can replace parts of the straight.",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "4wan",
+      "7wan",
+      "2stick",
+      "greendrag",
+      "8stick",
+      "3dot",
+      "6dot",
+      "9dot",
+      "east",
+      "west",
+      "north",
+      "reddrag",
+      "whitedrag"
+    ]
+  },
+  {
+    "name": "Knitted Greater Honors",
+    "description": "147 258 369 of different suits with honor tiles instead of melds and an eye. Honor tiles can replace parts of the straight. Must have one of each honor to score this level.",
+    "notes": "",
+    "tiles": [
+      "1wan",
+      "4wan",
+      "2stick",
+      "5stick",
+      "3dot",
+      "6dot",
+      "9dot",
+      "east",
+      "south",
+      "west",
+      "north",
+      "reddrag",
+      "whitedrag",
+      "greendrag"
+    ]
   }
 ]

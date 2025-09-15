@@ -1,14 +1,23 @@
 export const TEMPLATE = {
-  name: 'Hong Kong Traditional',
+  name: 'Green Tile Social Club',
   style: 'hk',
   description:
-    'The traditional scoring system for Hong Kong Mahjong, based on information from wikipedia.',
-  link: 'https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules',
+    'The scoring system for Green Tile Social Club, primarily based on traditional HK Mahjong rules.',
   score_type: 'Fan',
   rules: [
     { name: 'Self Flower', value: 1, tags: ['standard', 'bonus'] },
     { name: 'No Flowers', value: 1, tags: ['standard', 'bonus'] },
     { name: 'Flower Set', value: 2, tags: ['standard', 'bonus'] },
+    {
+      name: 'Seven Flowers',
+      value: 3,
+      tags: ['extra', 'bonus', 'autowin'],
+    },
+    {
+      name: 'All Flowers',
+      value: 8,
+      tags: ['extra', 'bonus', 'autowin'],
+    },
     {
       name: 'All Sequences',
       variant_name: 'All Chows',
@@ -121,7 +130,7 @@ export const TEMPLATE = {
     },
     {
       name: 'Nine Gates',
-      value: 10,
+      value: 13,
       tags: ['standard', 'limit'],
     },
     {

@@ -1,8 +1,7 @@
 {
-  "name": "Hong Kong Traditional",
-  "description": "The traditional scoring system for Hong Kong Mahjong, based on information from wikipedia.",
+  "name": "Hong Kong Straights Expansion",
+  "description": "A variant of Hong Kong Traditional scoring that adds additional sequence based rules to the game.",
   "style": "hk",
-  "link": "https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules",
   "score_type": "Fan",
   "rules": [
     {
@@ -44,6 +43,27 @@
       "tags": [
         "standard",
         "bonus"
+      ]
+    },
+    {
+      "name": "All Flowers",
+      "description": "Drawing all 8 of the flowers.",
+      "notes": "In some variations, this counts as an automatic win.",
+      "tiles": [
+        "flower11",
+        "flower12",
+        "flower13",
+        "flower14",
+        "flower21",
+        "flower22",
+        "flower23",
+        "flower24"
+      ],
+      "value": 8,
+      "tags": [
+        "extra",
+        "bonus",
+        "autowin"
       ]
     },
     {
@@ -175,6 +195,134 @@
       ]
     },
     {
+      "name": "Pure Double",
+      "description": "Two runs of the same suit and same numerical sequence.",
+      "notes": "In some variations, this only scores if the hand is also concealed.",
+      "tiles": [
+        "1wan",
+        "2wan",
+        "3wan",
+        "1wan",
+        "2wan",
+        "3wan"
+      ],
+      "value": 1,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
+      "name": "Outside Hand",
+      "description": "A hand that includes Terminals and Honors in each set, including the pair.",
+      "notes": "",
+      "tiles": [
+        "1dot",
+        "2dot",
+        "3dot",
+        "1wan",
+        "1wan",
+        "1wan",
+        "7stick",
+        "8stick",
+        "9stick",
+        "east",
+        "east",
+        "east",
+        "whitedrag",
+        "whitedrag"
+      ],
+      "value": 1,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
+      "name": "Simple Hand",
+      "description": "A hand formed without Terminal or Honor tiles.",
+      "notes": "",
+      "tiles": [
+        "2dot",
+        "3dot",
+        "4dot",
+        "5dot",
+        "5dot",
+        "5dot",
+        "6stick",
+        "7stick",
+        "8stick",
+        "4wan",
+        "5wan",
+        "6wan",
+        "3stick",
+        "3stick"
+      ],
+      "value": 1,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
+      "name": "Mixed Straight",
+      "description": "A straight (tiles 1-9) formed by sequences from all three suits.",
+      "notes": "The sequences must be exactly [1, 2, 3], [4, 5, 6], and [7, 8, 9].",
+      "tiles": [
+        "1dot",
+        "2dot",
+        "3dot",
+        "4wan",
+        "5wan",
+        "6wan",
+        "7stick",
+        "8stick",
+        "9stick"
+      ],
+      "value": 2,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
+      "name": "Mixed Triple Sequence",
+      "description": "Three runs of the same numerical sequence, one in each suit.",
+      "notes": "",
+      "tiles": [
+        "1dot",
+        "2dot",
+        "3dot",
+        "1wan",
+        "2wan",
+        "3wan",
+        "1stick",
+        "2stick",
+        "3stick"
+      ],
+      "value": 3,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
+      "name": "Pure Straight",
+      "description": "A hand using tiles 1-9 from any one suit, forming three consecutive sequences.",
+      "notes": "These must be exactly [1, 2, 3], [4, 5, 6], and [7, 8, 9].",
+      "tiles": [
+        "1dot",
+        "2dot",
+        "3dot",
+        "4dot",
+        "5dot",
+        "6dot",
+        "7dot",
+        "8dot",
+        "9dot"
+      ],
+      "variant_name": "Full Straight",
+      "value": 3,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
       "name": "All Triplets",
       "description": "Hand is composed of all pongs or kongs",
       "notes": "",
@@ -267,6 +415,56 @@
       ]
     },
     {
+      "name": "Knitted Straight",
+      "description": "Hand with 147 258 369 of different suits, an additional meld, and a pair. 147, 258, and 369 count as chows for scoring.",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "4wan",
+        "7wan",
+        "2stick",
+        "5stick",
+        "8stick",
+        "3dot",
+        "6dot",
+        "9dot",
+        "3wan",
+        "3wan",
+        "3wan",
+        "east",
+        "east"
+      ],
+      "value": 4,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
+      "name": "Knitted Lesser Honors",
+      "description": "147 258 369 of different suits with honor tiles instead of melds and an eye. Honor tiles can replace parts of the straight.",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "4wan",
+        "7wan",
+        "2stick",
+        "greendrag",
+        "8stick",
+        "3dot",
+        "6dot",
+        "9dot",
+        "east",
+        "west",
+        "north",
+        "reddrag",
+        "whitedrag"
+      ],
+      "value": 4,
+      "tags": [
+        "extra"
+      ]
+    },
+    {
       "name": "Pure One Suit",
       "description": "All tiles from a single suit.",
       "notes": "This can be a mix of pongs, kongs, and chows but cannot include honor tiles.",
@@ -293,6 +491,31 @@
       "value": 7,
       "tags": [
         "standard"
+      ]
+    },
+    {
+      "name": "Knitted Greater Honors",
+      "description": "147 258 369 of different suits with honor tiles instead of melds and an eye. Honor tiles can replace parts of the straight. Must have one of each honor to score this level.",
+      "notes": "",
+      "tiles": [
+        "1wan",
+        "4wan",
+        "2stick",
+        "5stick",
+        "3dot",
+        "6dot",
+        "9dot",
+        "east",
+        "south",
+        "west",
+        "north",
+        "reddrag",
+        "whitedrag",
+        "greendrag"
+      ],
+      "value": 7,
+      "tags": [
+        "extra"
       ]
     },
     {
@@ -453,7 +676,7 @@
         "9wan",
         "5wan"
       ],
-      "value": 10,
+      "value": 13,
       "tags": [
         "standard",
         "limit"

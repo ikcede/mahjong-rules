@@ -1,8 +1,7 @@
 {
-  "name": "Hong Kong Traditional",
-  "description": "The traditional scoring system for Hong Kong Mahjong, based on information from wikipedia.",
+  "name": "Green Tile Social Club",
+  "description": "The scoring system for Green Tile Social Club, primarily based on traditional HK Mahjong rules.",
   "style": "hk",
-  "link": "https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules",
   "score_type": "Fan",
   "rules": [
     {
@@ -44,6 +43,47 @@
       "tags": [
         "standard",
         "bonus"
+      ]
+    },
+    {
+      "name": "Seven Flowers",
+      "description": "Drawing 7 flower tiles.",
+      "notes": "In some variations, this counts as an automatic win.",
+      "tiles": [
+        "flower11",
+        "flower12",
+        "flower13",
+        "flower14",
+        "flower21",
+        "flower22",
+        "flower23"
+      ],
+      "value": 3,
+      "tags": [
+        "extra",
+        "bonus",
+        "autowin"
+      ]
+    },
+    {
+      "name": "All Flowers",
+      "description": "Drawing all 8 of the flowers.",
+      "notes": "In some variations, this counts as an automatic win.",
+      "tiles": [
+        "flower11",
+        "flower12",
+        "flower13",
+        "flower14",
+        "flower21",
+        "flower22",
+        "flower23",
+        "flower24"
+      ],
+      "value": 8,
+      "tags": [
+        "extra",
+        "bonus",
+        "autowin"
       ]
     },
     {
@@ -453,7 +493,7 @@
         "9wan",
         "5wan"
       ],
-      "value": 10,
+      "value": 13,
       "tags": [
         "standard",
         "limit"

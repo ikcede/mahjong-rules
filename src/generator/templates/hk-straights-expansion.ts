@@ -1,14 +1,18 @@
 export const TEMPLATE = {
-  name: 'Hong Kong Traditional',
+  name: 'Hong Kong Straights Expansion',
   style: 'hk',
   description:
-    'The traditional scoring system for Hong Kong Mahjong, based on information from wikipedia.',
-  link: 'https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules',
+    'A variant of Hong Kong Traditional scoring that adds additional sequence based rules to the game.',
   score_type: 'Fan',
   rules: [
     { name: 'Self Flower', value: 1, tags: ['standard', 'bonus'] },
     { name: 'No Flowers', value: 1, tags: ['standard', 'bonus'] },
     { name: 'Flower Set', value: 2, tags: ['standard', 'bonus'] },
+    {
+      name: 'All Flowers',
+      value: 8,
+      tags: ['extra', 'bonus', 'autowin'],
+    },
     {
       name: 'All Sequences',
       variant_name: 'All Chows',
@@ -60,6 +64,17 @@ export const TEMPLATE = {
       value: 1,
       tags: ['extra'],
     },
+    { name: 'Pure Double', value: 1, tags: ['extra'] },
+    { name: 'Outside Hand', value: 1, tags: ['extra'] },
+    { name: 'Simple Hand', value: 1, tags: ['extra'] },
+    { name: 'Mixed Straight', value: 2, tags: ['extra'] },
+    { name: 'Mixed Triple Sequence', value: 3, tags: ['extra'] },
+    {
+      name: 'Pure Straight',
+      variant_name: 'Full Straight',
+      value: 3,
+      tags: ['extra'],
+    },
     {
       name: 'All Triplets',
       variant_name: 'All Pongs',
@@ -83,12 +98,15 @@ export const TEMPLATE = {
       value: 4,
       tags: ['extra'],
     },
+    { name: 'Knitted Straight', value: 4, tags: ['extra'] },
+    { name: 'Knitted Lesser Honors', value: 4, tags: ['extra'] },
     {
       name: 'Pure One Suit',
       alt_names: ['Pure Hand', 'Full Flush'],
       value: 7,
       tags: ['standard'],
     },
+    { name: 'Knitted Greater Honors', value: 7, tags: ['extra'] },
     {
       name: 'Lesser Dragons',
       value: 5,
@@ -121,7 +139,7 @@ export const TEMPLATE = {
     },
     {
       name: 'Nine Gates',
-      value: 10,
+      value: 13,
       tags: ['standard', 'limit'],
     },
     {
