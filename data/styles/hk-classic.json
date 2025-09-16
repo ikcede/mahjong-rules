@@ -1,6 +1,6 @@
 {
-  "name": "Green Tile Social Club",
-  "description": "The scoring system for Green Tile Social Club, primarily based on traditional HK Mahjong rules.",
+  "name": "HK Classic",
+  "description": "A popularized scoring system based on traditional HK Mahjong rules with a few additions used by many modern mahjong clubs.",
   "style": "hk",
   "score_type": "Fan",
   "rules": [
@@ -60,6 +60,7 @@
       ],
       "value": 3,
       "tags": [
+        "extra",
         "bonus",
         "autowin"
       ]
@@ -80,6 +81,7 @@
       ],
       "value": 8,
       "tags": [
+        "extra",
         "bonus",
         "autowin"
       ]
@@ -357,6 +359,16 @@
         "whitedrag",
         "whitedrag"
       ],
+      "value": 8,
+      "tags": [
+        "standard"
+      ]
+    },
+    {
+      "name": "Double Kong Replacement",
+      "description": "Drawing the winning tile from a kong (does not stack with self-draw)",
+      "notes": "",
+      "tiles": [],
       "value": 8,
       "tags": [
         "standard"

@@ -1,8 +1,8 @@
 export const TEMPLATE = {
-  name: 'Green Tile Social Club',
+  name: 'HK Classic',
   style: 'hk',
   description:
-    'The scoring system for Green Tile Social Club, primarily based on traditional HK Mahjong rules.',
+    'A popularized scoring system based on traditional HK Mahjong rules with a few additions used by many modern mahjong clubs.',
   score_type: 'Fan',
   rules: [
     { name: 'Self Flower', value: 1, tags: ['standard', 'bonus'] },
@@ -11,12 +11,12 @@ export const TEMPLATE = {
     {
       name: 'Seven Flowers',
       value: 3,
-      tags: ['bonus', 'autowin'],
+      tags: ['extra', 'bonus', 'autowin'],
     },
     {
       name: 'All Flowers',
       value: 8,
-      tags: ['bonus', 'autowin'],
+      tags: ['extra', 'bonus', 'autowin'],
     },
     {
       name: 'All Sequences',
@@ -100,6 +100,11 @@ export const TEMPLATE = {
     },
     {
       name: 'Greater Dragons',
+      value: 8,
+      tags: ['standard'],
+    },
+    {
+      name: 'Double Kong Replacement',
       value: 8,
       tags: ['standard'],
     },
